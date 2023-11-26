@@ -1,5 +1,4 @@
-# zoom_bot_join_and_record
-## Zoom Meeting Automation Project
+# Zoom Meeting Automation Project
 This Python project provides an automation script for joining and recording Zoom meetings through image recognition using PyAutoGUI library. The script aims to streamline the process of joining a meeting, inputting meeting credentials, and initiating recording.
 
 ### Prerequisites
