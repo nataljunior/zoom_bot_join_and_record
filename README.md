@@ -5,7 +5,7 @@ This Python project provides an automation script for joining and recording Zoom
 ### Prerequisites
  - Python
  - PyAutoGUI library
- - 
+   
 ### How to Use
 Clone the repository to your local machine.
 Install the necessary libraries, especially PyAutoGUI.
