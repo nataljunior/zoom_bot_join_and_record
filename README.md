@@ -5,6 +5,7 @@ This Python project provides an automation script for joining and recording Zoom
 ### Prerequisites
  - Python
  - PyAutoGUI library
+ - Depending on your environment or downloaded packages/OS you'll need to use some other libraries. Pay attention on the warnings and search on the internet in case it is needed.
    
 ### How to Use
 Clone the repository to your local machine.
@@ -21,9 +22,9 @@ The code performs the following actions:
 - Mutes microphone and stops video.
 - Joins the meeting and initiates the recording.
 - Sends the meeting request.
-Note: Please ensure that the image files (*.png) used for recognition correspond to the Zoom interface in your system. Adjustments might be needed based on your screen resolution or Zoom interface changes.
+
+### Note: Please ensure that the image files (*.png) used for recognition correspond to the Zoom interface in your system. Adjustments might be needed based on your screen resolution or Zoom interface changes.
 
 ### Caution: Use this script responsibly and in compliance with Zoom's terms of service. Automated actions in applications like Zoom might have implications and should be used with proper authorization.
 
-### Disclaimer
-This script is solely for educational purposes and convenience in automating personal tasks. Misuse of this script for unauthorized access or unethical behavior is strictly discouraged.
+### Disclaimer: This script is solely for educational purposes and convenience in automating personal tasks. Misuse of this script for unauthorized access or unethical behavior is strictly discouraged.
