@@ -3,6 +3,7 @@
 This Python project provides an automation script for joining and recording Zoom meetings through image recognition using PyAutoGUI library. The script aims to streamline the process of joining a meeting, inputting meeting credentials, and initiating recording.
 
 ### Prerequisites
+ - You'll need to run this code in an interface that uses your desktop in some way, this code will not run in cloud notebooks such as Google Collab. I used VSCode in Anaconda environment
  - Python
  - PyAutoGUI library
  - Depending on your environment or downloaded packages/OS you'll need to use some other libraries. Pay attention on the warnings and search on the internet in case it is needed.
