@@ -2,126 +2,114 @@ import pyautogui
 import subprocess
 import datetime
 import time
-#import opencv
+# import opencv
 
 def join(id, password):
-#open zoom / join
-    subprocess.call("C:\\Users\\Natal Jr\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe", shell = True) 
+    # Open the Zoom application. Update the path to your own Zoom executable file. - \\ required - 
+    subprocess.call("C:\\Users\\USER\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe", shell=True)
+    
+    # Loop until finding and clicking the 'Join' button.
     while True:
         join1 = pyautogui.locateCenterOnScreen('join1.png')
-        if join1 != None:
+        if join1 is not None:
             pyautogui.click(join1)
             print("Clicked Join 1")
             break
         else:
             print("Could not find join 1")
-            time.sleep(2) 
+            time.sleep(2)
     
-# # click out of the box, fix the meeting_id input issue 
-#     while True:
-#         click = pyautogui.locateCenterOnScreen('click.png')
-#         if click != None:
-#             pyautogui.moveTo(click)
-#             print("moved")
-#             break
-#         else:
-#             print("Could not find")
-#             time.sleep(2)  
-
-   
-#adding meeting_id and joining
+    # Locate the meeting ID input field and enter the meeting ID to join.
     while True:
         meeting_id = pyautogui.locateOnScreen('meeting_id.png')
-        if meeting_id != None:
+        if meeting_id is not None:
             pyautogui.click(meeting_id)
-            print("Made the Input meeting_id")
+            print("Entered the Meeting ID")
             pyautogui.typewrite(id)
             pyautogui.click(pyautogui.locateCenterOnScreen('join2.png'))
             break
         else:
-            print("Could not find meeting_id")
+            print("Could not find meeting ID input field")
             time.sleep(2)
 
-#typing pswd
+    # Locate the password input field and enter the meeting password.
     while True:
         pswd = pyautogui.locateCenterOnScreen('pswd2.png')
-        if pswd != None:
+        if pswd is not None:
             pyautogui.click(pswd)
-            print("Made the Input pswd")
+            print("Entered the Meeting Password")
             pyautogui.typewrite(password)
             pyautogui.click(pyautogui.locateCenterOnScreen('join_meeting.png'))
             break
         else:
-            print("Could not find the input pswd")
+            print("Could not find the input password field")
             time.sleep(2)
 
-#mute
+    # Mute the microphone.
     while True:
         mute = pyautogui.locateCenterOnScreen('mute.png')
-        if mute != None:
+        if mute is not None:
             pyautogui.click(mute)
             print("Clicked Mute")
             break
         else:
-            print("Could not find Mute")
-            time.sleep(2) 
+            print("Could not find Mute button")
+            time.sleep(2)
 
-#stop video
+    # Stop the video.
     while True:
         stop_video = pyautogui.locateCenterOnScreen('stop_video.png')
-        if stop_video != None:
+        if stop_video is not None:
             pyautogui.click(stop_video)
-            print("Clicked stop_video")
+            print("Clicked Stop Video")
             break
         else:
-            print("Could not find stop_video")
-            time.sleep(2) 
+            print("Could not find Stop Video button")
+            time.sleep(2)
 
-
-#join button 3
+    # Click the third 'Join' button.
     while True:
         join3 = pyautogui.locateCenterOnScreen('join3.png')
-        if join3 != None:
+        if join3 is not None:
             pyautogui.click(join3)
             print("Clicked Join 3")
             break
         else:
-            print("Could not find join 3")
-            time.sleep(2) 
+            print("Could not find Join 3 button")
+            time.sleep(2)
 
+    # Attempt to maximize the meeting window in Zoom (commented out due to Zoom configuration options).
+    # While True:
+    #     maximize = pyautogui.locateCenterOnScreen('maximize.png')
+    #     if maximize is not None:
+    #         pyautogui.click(maximize)
+    #         print("Clicked maximize")
+    #         break
+    #     else:
+    #         print("Could not find maximize button")
+    #         time.sleep(2)
 
-
-# # #maximize
-#     while True:
-#         maximize = pyautogui.locateCenterOnScreen('maximize.png')
-#         if maximize != None:
-#             pyautogui.click(maximize)
-#             print("Clicked maximize")
-#             break
-#         else:
-#             print("Could not find maximize")
-#             time.sleep(2) 
-
-#record
+    # Start the meeting recording.
     while True:
         record = pyautogui.locateOnScreen('record.png')
-        if record != None:
+        if record is not None:
             pyautogui.click(record)
             print("Clicked Record")
             break
         else:
-            print("Could not find record")
-            time.sleep(2) 
+            print("Could not find Record button")
+            time.sleep(2)
 
-#send_request
+    # Send a request to start recording the meeting.
     while True:
         send_request = pyautogui.locateCenterOnScreen('send_request.png')
-        if send_request != None:
+        if send_request is not None:
             pyautogui.click(send_request)
-            print("Clicked send_request")
+            print("Clicked Send Request")
             break
         else:
-            print("Could not find send_request")
-            time.sleep(2) 
+            print("Could not find Send Request button")
+            time.sleep(2)
 
-join("6788885688","L1ZHRTcxc29jemNIUlZGLzhKYXBWQT09")
+# Replace 'meeting_id' and 'meeting_password' with your actual meeting ID and password.
+join("meeting_id", "meeting_password")
